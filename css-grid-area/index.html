@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Area</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        #page {
+            display: grid;
+            grid-template-columns: repeat(3, 33.33%);
+            grid-template-columns: [first] 15% [frist-whitespace] 80px [content] auto [second-whitespace] 80px [last] 15%;
+            grid-template-rows: [header-row] 25vh [content-row] 50vh [prefooter-row] 20vh [footer-row] 5vh;
+            grid-template-areas:
+                "header header header header header"
+                "main main main sidebar sidebar "
+                "prefooter prefooter prefooter prefooter prefooter"
+                "footer footer footer footer footer";
+
+            /* Shorthand notation */
+            /* grid-template:
+                [header-start] "header header header header header" 25vh [header-end]
+                [main-start] "main main main sidebar sidebar" 50vh [main-end]
+                [prefooter-start] "prefooter prefooter prefooter prefooter prefooter" 20vh [prefooter-end]
+                [footer-start] "footer footer footer footer footer" 5vh [footer-end]
+                / 15% 80px auto 80px 15%; */
+        } 
+    
+        .box {
+            border: 1px solid black;
+        }
+
+        .box-1 {
+            background: red;
+            grid-area: header;
+        } 
+
+        .box-2 {
+            background: blue;
+            grid-area: main;
+        }
+
+        .box-3 {
+            background: green;
+            grid-area: sidebar;
+        }
+
+        .box-4 {
+            background: yellow;
+            grid-area: prefooter;
+        }
+
+        .box-5 {
+            background: purple;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body> 
+    <div id="page">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+        <div class="box box-5">Box 5</div>
+    </div>
+</body>
+</html>

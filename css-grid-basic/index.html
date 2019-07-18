@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        #page {
+            display: grid;
+            /* grid-template-columns: repeat(3, 33.33%); */
+            grid-template-columns: [first] 15% [frist-whitespace] 80px [content] auto [second-whitespace] 80px [last] 15%;
+            grid-template-rows: [header-row] 25vh [content-row] 50vh [prefooter-row] 20vh [footer-row] 5vh;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            /* shorthand syntax */
+            /* Note: The grid- prefix will be removed and grid-column-gap and grid-row-gap renamed to column-gap and row-gap. The unprefixed properties are already supported in Chrome 68+, Safari 11.2 Release 50+ and Opera 54+. */
+            /* grid-gap: 1em 1em; */
+        }
+
+        .box {
+            border: 1px solid black;
+        }
+
+        .box-1 {
+            background: red;
+        } 
+
+        .box-2 {
+            background: blue;
+        }
+
+        .box-3 {
+            background: green;
+        }
+
+        .box-4 {
+            background: yellow;
+        }
+
+        .box-5 {
+            background: purple;
+        }
+
+        .box-6 {
+            
+        }
+
+        .box-7 {
+            
+        }
+
+        .box-8 {
+            
+        }
+
+        .box-9 {
+            
+        }
+
+        .box-10 {
+            
+        }
+
+        .box-11 {
+            
+        }
+
+        .box-12 {
+            
+        }
+
+        .box-13 {
+            
+        }
+
+        .box-14 {
+            
+        }
+
+        .box-15 {
+            
+        }
+    </style>
+</head>
+<body> 
+    <div id="page">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+        <div class="box box-5">Box 5</div>
+
+        <div class="box box-6">Box 6</div>
+        <div class="box box-7">Box 7</div>
+        <div class="box box-8">Box 8</div>
+        <div class="box box-9">Box 9</div>
+        <div class="box box-10">Box 10</div>
+
+        <div class="box box-11">Box 11</div>
+        <div class="box box-12">Box 12</div>
+        <div class="box box-13">Box 13</div>
+        <div class="box box-14">Box 14</div>
+        <div class="box box-15">Box 15</div>
+
+    </div>
+</body>
+</html>
